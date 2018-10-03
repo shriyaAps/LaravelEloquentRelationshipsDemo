@@ -27,4 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    /**
+     * @DateCreated         03-Oct-2018
+     * @ShortDescription    Get the phone record associated with the user.
+     * @return  [result set of has one method]
+     */
+    public function phone()
+    {
+        return $this->hasOne('App\Phone');
+    }
 }

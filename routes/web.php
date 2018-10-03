@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/addPhone', 'UserPhoneRelationshipController@index')->name('addPhone');
+Route::post('/addPhone', 'UserPhoneRelationshipController@insertPhoneRecord');
+
